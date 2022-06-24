@@ -45,8 +45,8 @@ platforms = ["linux/amd64"]
     base-files \
     ca-certificates \
     libc6 \
-    libssl3 \
     netbase \
+    openssl \
     tzdata \
     zlib1g \
     """
