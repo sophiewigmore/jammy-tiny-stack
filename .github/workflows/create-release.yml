@@ -270,7 +270,7 @@ jobs:
 
          ## only fail if packages are removed AND the release has not been forced
          if [ "${build}" -gt 0 ] || [ "${run}" -gt 0 ]; then
-           if "${{ github.event.inputs.force }}" == 'false'; then
+           if [ "${{ github.event.inputs.force }}" != 'true' ]; then
              echo "Packages removed without authorization. Stack cannot be released."
              exit 1
            else
