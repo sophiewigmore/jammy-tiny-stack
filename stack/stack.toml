@@ -28,6 +28,7 @@ platforms = ["linux/amd64"]
     libssl3 \
     libyaml-0-2 \
     netbase \
+    openssl \
     tzdata \
     xz-utils \
     zlib1g-dev \
@@ -44,7 +45,9 @@ platforms = ["linux/amd64"]
     packages = """\
     base-files \
     ca-certificates \
+    jq \
     libc6 \
+    libssl3 \
     netbase \
     openssl \
     tzdata \
