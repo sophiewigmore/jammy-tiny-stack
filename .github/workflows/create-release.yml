@@ -138,6 +138,9 @@ jobs:
     if: ${{ ! ( needs.poll_usns.outputs.usns == '[]' && github.event_name == 'schedule' ) }}
     runs-on: ubuntu-latest
     steps:
+    - name: Print force field
+      run: echo ${{ github.event.inputs.force }}
+
     - name: Checkout
       uses: actions/checkout@v3
 
@@ -191,6 +194,8 @@ jobs:
     needs: [ create_stack ]
     runs-on: ubuntu-latest
     steps:
+    - name: Print force field
+      run: echo "${{github.event.inputs.force}}"
     - name: Download Build Receipt
       uses: actions/download-artifact@v3
       with:
