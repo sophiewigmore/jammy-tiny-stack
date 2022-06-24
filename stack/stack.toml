@@ -45,7 +45,6 @@ platforms = ["linux/amd64"]
     packages = """\
     base-files \
     ca-certificates \
-    jq \
     libc6 \
     libssl3 \
     netbase \

@@ -467,7 +467,7 @@ jobs:
 
     - name: Create Release Notes
       id: notes
-      uses: paketo-buildpacks/github-config/actions/stack/release-notes@main
+      uses: paketo-buildpacks/github-config/actions/stack/release-notes@allow-stack-pkg-removal
       with:
         build_image: "paketobuildpacks/build-${{ steps.repo_name.outputs.registry_repo_name }}:${{ steps.tag.outputs.tag }}"
         run_image: "paketobuildpacks/run-${{ steps.repo_name.outputs.registry_repo_name }}:${{ steps.tag.outputs.tag }}"
